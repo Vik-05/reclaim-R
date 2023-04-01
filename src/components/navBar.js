@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Page from "../pages/page";
+import Lost from "../pages/lost";
+import Found from "../pages/found";
 import { Sidebar, Menu, MenuItem, useProSidebar } from "react-pro-sidebar";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import PeopleOutlinedIcon from "@mui/icons-material/PeopleOutlined";
@@ -12,6 +14,7 @@ import { Login } from "@mui/icons-material";
 
 export default function NavBar() {
   const { collapseSidebar } = useProSidebar();
+  const handlechange  = event =>{ } 
   return (
    <div>
 
@@ -30,12 +33,12 @@ export default function NavBar() {
             <h2>Admin</h2>
           </MenuItem>
 
-          <MenuItem icon={<HomeOutlinedIcon />}>Home</MenuItem>
-          <MenuItem icon={<PeopleOutlinedIcon />}>Team</MenuItem>
-          <MenuItem icon={<ContactsOutlinedIcon />}>Contacts</MenuItem>
-          <MenuItem icon={<ReceiptOutlinedIcon />}>Profile</MenuItem>
-          <MenuItem icon={<HelpOutlineOutlinedIcon />}>FAQ</MenuItem>
-          <MenuItem icon={<CalendarTodayOutlinedIcon />}>Calendar</MenuItem>
+          <MenuItem icon={<HomeOutlinedIcon />}><Link onClick={handlechange} to="/Found">Found</Link></MenuItem>
+          <MenuItem icon={<PeopleOutlinedIcon />}><Link onClick={handlechange} to="/Home">Home</Link></MenuItem>
+          <MenuItem icon={<ContactsOutlinedIcon />}><Link onClick={handlechange} to="/Lost">Lost</Link></MenuItem>
+          <MenuItem icon={<ReceiptOutlinedIcon />}><Link onClick={handlechange} to="/Sell">Sell</Link></MenuItem>
+          <MenuItem icon={<HelpOutlineOutlinedIcon />}><Link onClick={handlechange} to="/Donate">Donate</Link></MenuItem>
+          <MenuItem icon={<CalendarTodayOutlinedIcon />}><Link onClick={handlechange} to="/Found">Found</Link></MenuItem>
         </Menu>
       </Sidebar>
       {/* <main  style={{width: "100%"}}>

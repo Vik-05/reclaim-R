@@ -5,12 +5,17 @@ import Lost from "./lost";
 import Found from "./found";
 import Sell from "./sell";
 import Donate from "./donate";
+import { useState, useEffect} from "react";
+
 export default function Page() {
+  
+  const[divi, setDivi] = useState("refresh");
   return (
+    
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<Login />}></Route>
+          <Route path="/" element={<><Login /></>}></Route>
           <Route path="Home" element={<Home />}></Route>
           <Route path="Lost" element={<Lost />}></Route>
           <Route path="Found" element={<Found />}></Route>

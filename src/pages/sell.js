@@ -1,4 +1,4 @@
-export default function sell(){
+export default function Sell(){
     return(
         <div>
             sell
