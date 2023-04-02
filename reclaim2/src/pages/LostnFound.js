@@ -7,11 +7,23 @@ export default function LostnFound() {
       {/* <div className="p-10 bg-blue-950 text-white">Lost and Found</div> */}
       <div className="p-10">
         <div className="flex text-3xl p-4">Lost Section</div>
-        <Card />
+        <Card
+          image="https://cdn1.smartprix.com/rx-i4U4FAoxX-w1200-h1200/4U4FAoxX.jpg"
+          item="Laptop"
+          name="qwer"
+          email="qwer@gmail.com"
+          desc="an asus rog"
+        />
       </div>
       <div className="p-10">
         <div className="flex flex-row text-3xl p-4">Found Section</div>
-        <FoundCard />
+        <FoundCard
+          image="https://cdn1.smartprix.com/rx-i4U4FAoxX-w1200-h1200/4U4FAoxX.jpg"
+          item="Laptop"
+          name="qwer"
+          email="qwer@gmail.com"
+          desc="an asus rog"
+        />
       </div>
       <div className="flex">
         <div className="flex flex-col justify-between w-1/2 m-10">
@@ -19,7 +31,7 @@ export default function LostnFound() {
           <p className="text-lg ml-10">
             Fill this quick form to find your belonging
           </p>
-          <form>
+          <form method="GET">
             <label className="m-10 text-sm mb-0" htmlFor="">
               item name
             </label>
@@ -46,6 +58,7 @@ export default function LostnFound() {
             />
             <button
               type="Submit"
+              // onClick={GetData}
               className="text-lg bg-blue-950 rounded-3xl ml-10 p-3 text-white"
             >
               Submit response

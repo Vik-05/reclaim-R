@@ -14,7 +14,7 @@ app.use("/api/users", userRoute);
 app.get("/health", (req, res) => res.json({ message: "running fine" }));
 
 connection.then(() => {
-  app.listen(3000, () => {
+  app.listen(5000, () => {
     console.log("Server running");
   });
 });

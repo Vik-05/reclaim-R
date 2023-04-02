@@ -27,10 +27,10 @@ const NavBar = () => {
                 Lost n found
               </Link>
               <Link
-                to="/Donate"
+                to="/Chat"
                 className="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                Donate
+                Chat
               </Link>
               <Link
                 to="/Profile"

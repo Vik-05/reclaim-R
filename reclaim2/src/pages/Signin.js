@@ -1,42 +1,56 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios';
+
+async function sendDataToApiLog(data) {
+
+  return await axios({
+    method: 'POST',
+    url: 'http://localhost:5000/api/users/signin',
+    headers: {},
+    data,
+  })
+}
 
 const Signin = () => {
-  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
 //   const [collegeName, setCollegeName] = useState("");
   const [password, setpassword] = useState("");
-  const [enrollmentNumber, setEnrollmentNumber] = useState("");
   
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
   };
 
+  const PostDatalog = async (e)=>{
+    e.preventDefault();
+    const res = await sendDataToApiLog({
+      email,
+      password
+    })
+
+    console.log({res});
+  }
+
   return (
     <div className="h-screen flex items-center justify-center">
     <div className="flex h-5/6 w-11/12 bg-gray-200 rounded-[55px] border-4 border-blue-950">
       <div className="w-1/2 text-center flex flex-col items-center justify-center">
-        <form
+        <form method="POST"
           onSubmit={handleSubmit}
           className="bg-white rounded-lg p-10 h-full rounded-l-[50px] shadow-md"
         >
           <h2 className="text-5xl font-bold mb-4">Login</h2>
           <input
-            type="text"
-            placeholder="Full Name"
+            type="email"
+            placeholder="email"
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
+    
           <input
-            type="text"
-            placeholder="Enrollment Number"
-            className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
-            value={enrollmentNumber}
-            onChange={(e) => setEnrollmentNumber(e.target.value)}
-          />
-          <input
-            type="text"
+            type="password"
             placeholder="Password"
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
             value={password}
@@ -44,6 +58,7 @@ const Signin = () => {
           />
           <button
             type="submit"
+            onClick={PostDatalog}
             className="bg-blue-950 text-white rounded-xl py-2 px-10 hover:bg-blue-800"
           >
             Login
