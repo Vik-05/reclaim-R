@@ -6,6 +6,7 @@ import Signup from "../pages/Signup";
 
 const NavBar = () => {
  
+  
 
   return (
     <nav className=" bg-gray-900">
