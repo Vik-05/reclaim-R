@@ -1,5 +1,6 @@
 import Card from "../components/Card";
 import FoundCard from "../components/FoundCard";
+import Footer from "../components/Footer";
 export default function LostnFound() {
   return (
     <div className="text-4xl font-medium">
@@ -13,7 +14,7 @@ export default function LostnFound() {
         <FoundCard />
       </div>
       <div className="flex">
-        <div className="flex flex-col justify-between align-middle m-20">
+        <div className="flex flex-col justify-between w-1/2 m-10">
           <h1 className="text-4xl mb-0 m-10">Lost Something?</h1>
           <p className="text-lg ml-10">
             Fill this quick form to find your belonging
@@ -43,7 +44,7 @@ export default function LostnFound() {
             </button>
           </form>
         </div>
-        <div className="flex flex-col justify-between align-middle p-28 bg-blue-950 rounded-s-full text-white">
+        <div className="flex flex-col p-20 w-1/2 bg-gray-900 rounded-s-full text-white">
           <h1 className="text-4xl mb-0 m-10">Found Something?</h1>
           <p className="text-lg ml-10">
             Fill this quick form and help others find their belongings!
@@ -74,6 +75,7 @@ export default function LostnFound() {
           </form>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
