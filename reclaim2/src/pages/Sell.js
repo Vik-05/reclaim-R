@@ -6,7 +6,10 @@ export default function Sell() {
       {/* <div className="p-10 dark:bg-gray-900 text-white">Buy and Sell</div> */}
       <div className="p-10">
         <div className="text-3xl p-4">Shop or sell</div>
-        <SellCard />
+        <div className="flex gap-5 w-full">
+          <SellCard />
+          <SellCard />
+        </div>
       </div>
       <div className="flex justify-center">
         <div className="flex flex-col p-10 rounded-lg">
