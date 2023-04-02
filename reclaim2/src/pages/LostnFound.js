@@ -6,14 +6,14 @@ export default function LostnFound() {
   
   
   return (
-    <div className="text-4xl font-medium">
-      <div className="p-10 bg-blue-950 text-white">Lost and Found</div>
+    <div className="text-2xl font-medium">
+      {/* <div className="p-10 bg-blue-950 text-white">Lost and Found</div> */}
       <div className="p-10">
-        <div className="text-3xl p-4">Lost Section</div>
+        <div className="flex text-3xl p-4">Lost Section</div>
         <Card />
       </div>
       <div className="p-10">
-        <div className="text-3xl p-4">Found Section</div>
+        <div className="flex flex-row text-3xl p-4">Found Section</div>
         <FoundCard />
       </div>
       <div className="flex">
@@ -38,6 +38,14 @@ export default function LostnFound() {
               type="text"
               className="border-solid border-black block m-10"
               placeholder="hello"
+            />
+            <label className="m-10 text-sm mb-0" htmlFor="">
+              When and where?
+            </label>
+            <input
+              type="text-area"
+              className="border-solid border-black block m-10 text-md overflow-visible w-1/2 p-5 pl-0"
+              placeholder="last known where-abouts"
             />
             <button
               type="Submit"
