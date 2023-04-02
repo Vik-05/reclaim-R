@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Signin from "../pages/Signin";
+import Signup from "../pages/Signup";
 // import logo from "./reclaimr-logo.png";
 
 const NavBar = () => {
+ 
+
   return (
     <nav className=" bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -26,12 +30,12 @@ const NavBar = () => {
               >
                 Lost n found
               </Link>
-              <Link
+              {/* <Link
                 to="/Donate"
                 className="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
                 Donate
-              </Link>
+              </Link> */}
               <Link
                 to="/Profile"
                 className="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"

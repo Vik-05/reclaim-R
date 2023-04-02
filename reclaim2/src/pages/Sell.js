@@ -48,7 +48,7 @@ export default function Sell() {
             />
             <button
               type="Submit"
-              className="text-lg dark:bg-gray-900 rounded-3xl ml-10 p-3 text-white"
+              className="text-lg bg-gray-900 rounded-3xl ml-10 p-3 text-white"
             >
               Submit response
             </button>
