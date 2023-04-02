@@ -1,18 +1,46 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from 'axios';
+
+async function sendDataToApi(data) {
+
+  return await axios({
+    method: 'POST',
+    url: 'http://localhost:5000/api/users/signup',
+    headers: {},
+    data,
+  })
+}
 
 const Signup = () => {
   const [fullName, setFullName] = useState("");
-  const [collegeName, setCollegeName] = useState("");
-  const [course, setCourse] = useState("");
-  const [enrollmentNumber, setEnrollmentNumber] = useState("");
-  const [collegeId, setCollegeId] = useState("");
-  const [photo, setPhoto] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [dob, setdob] = useState("");
+  const [phone, setPhone] = useState("");
+  const [addres, setAddres] = useState("");
+  const[photo, setPhoto] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
   };
+
+  const PostData = async (e)=>{
+    e.preventDefault();
+    const resp = await sendDataToApi({
+      fullName,
+      email,
+      password,
+      dob,
+      phone,
+      addres,
+      photo
+    })
+
+    console.log({resp});
+    
+  }
 
   return (
     <div className="h-screen flex items-center justify-center">
@@ -26,39 +54,57 @@ const Signup = () => {
      </Link>
       </div>
       <div className="w-1/2 text-center flex flex-col items-center justify-center">
-        <form
+        <form method="POST"
           onSubmit={handleSubmit}
           className="bg-white rounded-lg p-10 h-full rounded-r-[50px] shadow-md"
         >
           <h2 className="text-5xl font-bold mb-4">Sign Up</h2>
           <input
             type="text"
-            placeholder="Full Name"
+            placeholder="Name"
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
           />
           <input
-            type="text"
-            placeholder="College Name"
+            type="email"
+            placeholder="email"
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
-            value={collegeName}
-            onChange={(e) => setCollegeName(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
           <input
-            type="text"
-            placeholder="Course"
+            type="password"
+            placeholder="password"
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
-            value={course}
-            onChange={(e) => setCourse(e.target.value)}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
+
           <input
             type="text"
-            placeholder="Enrollment Number"
+            placeholder="Address"
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
-            value={enrollmentNumber}
-            onChange={(e) => setEnrollmentNumber(e.target.value)}
+            value={addres}
+            onChange={(e) => setAddres(e.target.value)}
           />
+
+          <input
+            type="text"
+            placeholder="Phone no"
+            className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+          />
+
+          <input
+            type="text"
+            placeholder="DOB"
+            className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
+            value={dob}
+            onChange={(e) => setdob(e.target.value)}
+          />
+          
 < div className="w-full justify-evenly">
           <div className="inline w-1/2 text-left">
           <label>Upload your Id</label>
@@ -74,6 +120,7 @@ const Signup = () => {
 </div>
           <button
             type="submit"
+            onClick={PostData}
             className="bg-blue-950 text-white rounded-xl py-2 px-10 hover:bg-blue-800"
           >
             Sign Up

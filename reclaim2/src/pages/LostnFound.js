@@ -2,6 +2,9 @@ import Card from "../components/Card";
 import FoundCard from "../components/FoundCard";
 import Footer from "../components/Footer";
 export default function LostnFound() {
+  
+  
+  
   return (
     <div className="text-4xl font-medium">
       <div className="p-10 bg-blue-950 text-white">Lost and Found</div>
@@ -19,7 +22,7 @@ export default function LostnFound() {
           <p className="text-lg ml-10">
             Fill this quick form to find your belonging
           </p>
-          <form>
+          <form method="GET">
             <label className="m-10 text-sm mb-0" htmlFor="">
               item name
             </label>
@@ -38,6 +41,7 @@ export default function LostnFound() {
             />
             <button
               type="Submit"
+              // onClick={GetData}
               className="text-lg bg-blue-950 rounded-3xl ml-10 p-3 text-white"
             >
               Submit response
