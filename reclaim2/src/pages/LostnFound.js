@@ -2,19 +2,28 @@ import Card from "../components/Card";
 import FoundCard from "../components/FoundCard";
 import Footer from "../components/Footer";
 export default function LostnFound() {
-  
-  
-  
   return (
     <div className="text-2xl font-medium">
       {/* <div className="p-10 bg-blue-950 text-white">Lost and Found</div> */}
       <div className="p-10">
         <div className="flex text-3xl p-4">Lost Section</div>
-        <Card />
+        <Card
+          image="https://cdn1.smartprix.com/rx-i4U4FAoxX-w1200-h1200/4U4FAoxX.jpg"
+          item="Laptop"
+          name="qwer"
+          email="qwer@gmail.com"
+          desc="an asus rog"
+        />
       </div>
       <div className="p-10">
         <div className="flex flex-row text-3xl p-4">Found Section</div>
-        <FoundCard />
+        <FoundCard
+          image="https://cdn1.smartprix.com/rx-i4U4FAoxX-w1200-h1200/4U4FAoxX.jpg"
+          item="Laptop"
+          name="qwer"
+          email="qwer@gmail.com"
+          desc="an asus rog"
+        />
       </div>
       <div className="flex">
         <div className="flex flex-col justify-between w-1/2 m-10">

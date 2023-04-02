@@ -1,17 +1,13 @@
-export default function Card() {
+export default function Card(props) {
   return (
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
       <div class="px-6 py-4">
-        <img
-          src="https://www.adani.com/-/media/Project/LucknowAirport/Traveller/AirportServices/LostAndFound/lost-and-found.png"
-          alt="lmao"
-          class="w-100%"
-        />
-        <div class="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <img src={props.image} alt="lmao" class="w-100%" />
+        <div class="font-bold text-xl mb-2">{props.item}</div>
         <p class="text-gray-700 text-base">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
-          quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
-          nihil.
+          <div>Name: {props.name}</div>
+          <div>Contact info: {props.email}</div>
+          <div>Description: {props.desc}</div>
         </p>
       </div>
       <div class="px-6 pt-4 pb-2">

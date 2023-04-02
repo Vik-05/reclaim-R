@@ -7,8 +7,20 @@ export default function Sell() {
       <div className="p-10">
         <div className="text-3xl p-4">Shop or sell</div>
         <div className="flex gap-5 w-full">
-          <SellCard />
-          <SellCard />
+          <SellCard
+            image="https://cdn1.smartprix.com/rx-i4U4FAoxX-w1200-h1200/4U4FAoxX.jpg"
+            item="Laptop"
+            name="qwer"
+            email="qwer@gmail.com"
+            desc="an asus rog"
+          />
+          <SellCard
+            image="https://cdn1.smartprix.com/rx-i4U4FAoxX-w1200-h1200/4U4FAoxX.jpg"
+            item="Laptop"
+            name="qwer"
+            email="qwer@gmail.com"
+            desc="an asus rog"
+          />
         </div>
       </div>
       <div className="flex justify-center">
@@ -46,12 +58,17 @@ export default function Sell() {
               className="border-solid border-black block m-10"
               placeholder="Description"
             />
-            <button
-              type="Submit"
-              className="text-lg dark:bg-gray-900 rounded-3xl ml-10 p-3 text-white"
-            >
-              Submit response
-            </button>
+            <>
+              <button
+                type="Submit"
+                className="text-lg dark:bg-gray-900 w-48 m-2 rounded-3xl ml-10 p-3 text-white"
+              >
+                Sell
+              </button>
+              <button className="text-lg dark:bg-gray-900 w-48 m-2 rounded-3xl ml-10 p-3 text-white">
+                Donate
+              </button>
+            </>
           </form>
         </div>
       </div>
