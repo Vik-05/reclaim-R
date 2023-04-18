@@ -1,28 +1,33 @@
 import SellCard from "../components/SellCard";
+import sellarray from "../arrays/sellarray";
 import Footer from "../components/Footer";
+
+function createSellEntry(sellarray){
+  return(
+      <SellCard
+          key = {sellarray.id}
+          image = {sellarray.image}
+          item = {sellarray.item}
+          name = {sellarray.name}
+          email = {sellarray.email}
+          desc = {sellarray.desc}
+      />
+    );
+}
 export default function Sell() {
   return (
     <div className="text-4xl font-medium">
       {/* <div className="p-10 dark:bg-gray-900 text-white">Buy and Sell</div> */}
+      
+      {/* BUY AND SELL ITEMS SECTION */}
       <div className="p-10">
         <div className="text-3xl p-4">Shop or sell</div>
         <div className="flex gap-5 w-full">
-          <SellCard
-            image="https://cdn1.smartprix.com/rx-i4U4FAoxX-w1200-h1200/4U4FAoxX.jpg"
-            item="Laptop"
-            name="qwer"
-            email="qwer@gmail.com"
-            desc="an asus rog"
-          />
-          <SellCard
-            image="https://cdn1.smartprix.com/rx-i4U4FAoxX-w1200-h1200/4U4FAoxX.jpg"
-            item="Laptop"
-            name="qwer"
-            email="qwer@gmail.com"
-            desc="an asus rog"
-          />
+          {sellarray.map(createSellEntry)}
         </div>
       </div>
+      
+      {/* BUY AND SELL FORM BELOW */}
       <div className="flex justify-center">
         <div className="flex flex-col p-10 rounded-lg">
           <h1 className="text-4xl mb-0 m-10">Want to sell something?</h1>

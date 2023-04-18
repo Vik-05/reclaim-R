@@ -12,6 +12,10 @@ async function sendDataToApi(data) {
   })
 }
 
+const handlechange=(event)=>{
+
+}
+
 const Signup = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,9 +41,8 @@ const Signup = () => {
       addres,
       photo
     })
-
+    handleSubmit();
     console.log({resp});
-    
   }
 
   return (
@@ -60,14 +63,14 @@ const Signup = () => {
         >
           <h2 className="text-5xl font-bold mb-4">Sign Up</h2>
           <input
-            type="text"
+            type="text" required
             placeholder="Name"
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
             value={fullName}
             onChange={(e) => setFullName(e.target.value)}
           />
           <input
-            type="email"
+            type="email" required
             placeholder="email"
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
             value={email}
@@ -123,7 +126,9 @@ const Signup = () => {
             onClick={PostData}
             className="bg-blue-950 text-white rounded-xl py-2 px-10 hover:bg-blue-800"
           >
-            Sign Up
+    <Link to="/signin" onClick={handlechange}>Sign up</Link>
+
+            
           </button>
         </form>
       </div>

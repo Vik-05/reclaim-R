@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import axios from 'axios';
+
 
 async function sendDataToApiLog(data) {
 
@@ -16,7 +17,7 @@ const Signin = () => {
   const [email, setEmail] = useState("");
 //   const [collegeName, setCollegeName] = useState("");
   const [password, setpassword] = useState("");
-  
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission here
@@ -29,7 +30,11 @@ const Signin = () => {
       password
     })
 
-    console.log({res});
+    if(res.status==200)
+    {
+      console.log(res);
+      return navigate("/home");
+    }
   }
 
   return (
@@ -47,6 +52,7 @@ const Signin = () => {
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            
           />
     
           <input

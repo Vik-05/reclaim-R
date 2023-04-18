@@ -1,4 +1,4 @@
-export default function Card(props) {
+export default function LostCard(props) {
   return (
     <div class="max-w-sm rounded overflow-hidden shadow-lg">
       <div class="px-6 py-4">

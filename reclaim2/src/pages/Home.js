@@ -2,6 +2,7 @@ import React from "react";
 import Footer from "../components/Footer";
 
 function Home() {
+ 
   return (
     <div>
       {/* <div className="p-5 text-3xl bg-gray-900 text-white text-center font-2xl">
@@ -120,9 +121,11 @@ function Home() {
         <div className="text-center p-10 pb-0">
           <button
             type="button"
+            
             class="text-white bg-blue-700 p-5 pt-2 pb-2 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
-            Register Now
+            <a href='https://forms.gle/GB6wULqsfCkT6Kg9A' target="_blank"> Register Now</a>
+           
           </button>
         </div>
         {/* <div className='bg-one h-48 w-full'>
