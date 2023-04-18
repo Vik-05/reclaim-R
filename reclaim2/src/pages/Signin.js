@@ -52,6 +52,7 @@ const Signin = () => {
             className="w-full border-b border-black focus:border-black outline-none mb-4 p-2"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            
           />
     
           <input
