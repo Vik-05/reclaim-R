@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import { useState } from "react";
 import axios from 'axios';
 import NavBar from "../components/NavBar";
+import { ToastContainer, toast } from 'react-toastify';
+
 function createLostEntry(lostarray)
 {
     return(
