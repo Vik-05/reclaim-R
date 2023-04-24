@@ -7,6 +7,7 @@ import { useState } from "react";
 import axios from 'axios';
 import NavBar from "../components/NavBar";
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function createLostEntry(lostarray)
 {
@@ -59,6 +60,7 @@ export default function LostnFound() {
   const[image, setImage] = useState("");
   // const[image1, setImage1] = useState("");
 
+  const notify = () => toast("Wow so easy!");
   
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -93,6 +95,7 @@ export default function LostnFound() {
     })
     // setisLost=true
     uploadImage();
+    notify();
     handleSubmit();
     console.log({resp});
   }
@@ -251,6 +254,7 @@ export default function LostnFound() {
               >
               Submit response
             </button>
+            <ToastContainer />
          
         </div>
           </form>
