@@ -172,7 +172,7 @@ export default function LostnFound() {
                 <input
                   type="text" required
                   className="border-solid border-black block m-10 p-5 "
-                  placeholder="hello"
+                  placeholder="Title of item"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
                   />
@@ -187,7 +187,7 @@ export default function LostnFound() {
             <input
               type="text" required
               className="border-solid border-black block m-10 p-5"
-              placeholder="hello"
+              placeholder="Description"
               value={desc}
               onChange={(e) => setDesc(e.target.value)}
               />
@@ -209,13 +209,13 @@ export default function LostnFound() {
             </div>
             <div className="flex m-10">
       
-      <div className="flex flex-col gap-4 m-10">
+      <div className="flex flex-col gap-2 m-10">
 
-          <label>
+          <label className="text-[20px]">
          <input type="radio" name="lof" onChange={(e)=>setisLost(true)} />
           I lost my item
           </label>
-          <label>
+          <label className="text-[20px]">
           <input type="radio" name="lof" onChange={(e)=>setisFound(true)} />
           Found Something
           </label>
@@ -225,13 +225,14 @@ export default function LostnFound() {
           <br></br>
           
           {/* IMAGE UPLOAD */}
-          <div className="m-10">
+          <div className="mt-10">
               <div className="auth-inner" style={{ width : "auto"}}>
-                  Let's upload image <br></br>
+                 <div ></div> Let's upload image <br></br>
                   <input 
                     accept="image/*"
                     type="file"
                     onChange={convertToBase64}
+                    className="m-10 mt-0 text-sm mb-0 "
                     />
                   {image==="" || image===null? "" :<img width={100} height={100} src = {image} alt="unavailable" />}   
               </div>
@@ -243,7 +244,7 @@ export default function LostnFound() {
             <button
               type="Submit"
               onClick={PostData}
-              className="text-xl bg-blue-950 rounded-2xl m-10 p-2 text-white hover:text-blue-950 hover:bg-white hover:border-2"
+              className="text-xl bg-blue-950 rounded-2xl m-auto p-2 text-white hover:text-blue-950 hover:bg-white hover:border-2"
               >
               Submit response
             </button>
