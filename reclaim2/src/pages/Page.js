@@ -4,6 +4,7 @@ import LostnFound from "./LostnFound";
 import Signin from "./Signin";
 import Signup from "./Signup";
 import NavBar from "../components/NavBar";
+import Profile from "./Profile";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 import Profile from "./Profile";
@@ -47,7 +48,8 @@ export default function Page() {
         <Route path="lost-found" element={<LostnFound />}></Route>
         <Route path="Sell" element={<Sell />}></Route>
         <Route path="Chat" element={<Chat />}></Route>
-        <Route path="Profile" element = {<Profile />}></Route>
+
+        <Route path="Profile" element={<Profile />}></Route>
       </Routes>
     </div>
   );

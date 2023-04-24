@@ -18,16 +18,16 @@ function Home() {
         Don't let a Mishap cost you a Lot!!
       </div>
       <div className="p-20 pt-0 pb-0">
-        <div className="flex">
+        <div className="flex align-baseline">
           <div className="m-10">
             <img src="https://media.istockphoto.com/id/1187582529/photo/staying-connected-in-this-digital-age.jpg?s=612x612&w=0&k=20&c=35CssnACCspByqwlYO6hgfQQoF3e5Fe_kHya10SQbAw=" />
           </div>
 
           <div className="w-1/2">
-            <div className="p-10 text-3xl text-black text-center font-bold">
+            <div className="p-10 text-2xl text-black text-center font-bold">
               Manage losts and Found easily
             </div>
-            <p className="w-full text-lg">
+            <p className="w-full text-md">
               Firstly, it's important to establish a designated area for lost
               and found items. This could be a physical location, such as a box
               or shelf, or a digital location, such as a folder on your computer
@@ -49,10 +49,10 @@ function Home() {
           </div>
 
           <div className="w-1/2">
-            <div className="p-10 text-3xl text-black text-center font-bold">
+            <div className="pb-10 pt-10 text-2xl text-black text-center font-bold">
               Donate your stuff to the one who needs
             </div>
-            <p className="w-full text-lg">
+            <p className="w-full text-md">
               Donating to those who are in need is an act of kindness that can
               have a significant impact on the lives of others. Whether it's a
               financial contribution, donating goods or volunteering your time,
@@ -74,22 +74,17 @@ function Home() {
           </div>
 
           <div className="w-1/2">
-            <div className="p-10 text-3xl text-black text-center font-bold">
+            <div className="pt-10 pb-10 text-2xl text-black text-center font-bold">
               Sell Stuff you don't need anymore
             </div>
-            <p className="w-full text-lg">
+            <p className="w-full text-md">
               If you're looking to declutter your home and make some extra cash,
               selling the stuff you don't need anymore can be a great option.
               Not only can it help you to clear out unwanted items, but it can
               also put some money back in your pocket. Here are some tips for
               successfully selling your unwanted items Sort through your
               belongings and decide what you want to sell. Consider items that
-              are in good condition, but you no longer use or need. This could
-              include clothing, furniture, electronics, books, or household
-              items. Determine the value of your items. Research the current
-              market value of similar items to get an idea of how much you can
-              expect to sell your items for. You can use online marketplaces,
-              such as eBay or Amazon, to get a sense of pricing.
+              are in good condition, but you no longer use or need. 
             </p>
           </div>
         </div>
