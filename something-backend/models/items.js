@@ -3,6 +3,8 @@ const { Schema, model } = require("mongoose");
 const itemSchema = new Schema({
   title: String,
   desc: String,
+  whenAndwhere : String,
+  image: String,
   isFound: { type: Boolean, default: false },
   isLost: { type: Boolean, default: false },
   isSell: {type : Boolean, default: false},
