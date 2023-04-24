@@ -83,7 +83,7 @@ const signinUser = async (req, res) => {
 
 const getSingleUser = async (req, res) => {
   try {
-    const user = await Users.findById({ _id: req.user.id });
+    const user = await Users.findById(req.params.id);
 
     return res.status(200).json({ result: user });
   } catch (err) {
@@ -93,11 +93,11 @@ const getSingleUser = async (req, res) => {
 };
 
 const createItem = async (req, res) => {
-  const { title, desc, isFound, isLost, isSell} = req.body;
+  const {_id, title, desc, image, whenAndwhere, isFound, isLost, isSell} = req.body;
   try {
     console.log("the item is", title);
 
-    const existingItem = await Items.findOne({ title });
+    const existingItem = await Items.findOne({ _id });
     console.log(existingItem);
     if (existingItem) {
       console.log("hello");
@@ -110,10 +110,13 @@ const createItem = async (req, res) => {
       const newItem = await Items.create({
       title,
       desc,
+      image,
+      whenAndwhere,
       isFound,
       isLost,
       isSell,
     });
+    
     console.log(newItem)
     await newItem.save().then().catch();
     res.status(201).json({
@@ -168,6 +171,16 @@ const itemsBuy = async (req, res) => {
     res.status(500).json({ message: "Something went wrong" });
   }
 };
+
+const insertImage = async(req, res) => {
+  const {base64} = req.body;
+  try {
+    Items.create({image: base64});
+    res.send({Status : "ok"})
+  } catch (error) {
+      res.send({Status:"error", data:error});
+  }
+}
 module.exports = {
   createUser,
   signinUser,
@@ -177,4 +190,5 @@ module.exports = {
   sell,
   itemsLost,
   itemsBuy,
+  insertImage,
 };

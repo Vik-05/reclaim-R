@@ -1,5 +1,6 @@
 import React from "react";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 function Home() {
  
@@ -8,6 +9,7 @@ function Home() {
       {/* <div className="p-5 text-3xl bg-gray-900 text-white text-center font-2xl">
         Home Page
       </div> */}
+      <NavBar/>
       <img
         src="https://www.adani.com/-/media/Project/LucknowAirport/Traveller/AirportServices/LostAndFound/lost-and-found.png"
         className="w-full"

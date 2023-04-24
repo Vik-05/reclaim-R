@@ -3,12 +3,21 @@ import Sell from "./Sell";
 import LostnFound from "./LostnFound";
 import Signin from "./Signin";
 import Signup from "./Signup";
+import NavBar from "../components/NavBar";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./Home";
 export default function Page() {
   return (
     <div>
       <Routes>
+        {/* <Route 
+          path="navbar"
+          element={
+            <>
+              <NavBar />
+            </>
+          }
+        ></Route> */}
         <Route
           path="/"
           element={

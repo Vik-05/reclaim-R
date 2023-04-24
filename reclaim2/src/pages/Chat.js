@@ -2,7 +2,7 @@ import io from "socket.io-client";
 import { useState } from "react";
 import Chat2 from "./Chat2";
 import "./Chat.css";
-
+import NavBar from "../components/NavBar";
 const socket = io.connect("http://localhost:3001");
 
 export default function Chat() {
@@ -20,6 +20,7 @@ export default function Chat() {
   
   return (
     <div>       
+      <NavBar/>
             {/* ROOM IS FOR PRIVACY FOR CHATS, BOTH THE USERS SHOULD HAVE SAME ROOM */}
             {!showChat ? (
             <div className="joinChatContainer">
