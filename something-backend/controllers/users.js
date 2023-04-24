@@ -152,6 +152,44 @@ const sell = async (req, res) => {
   }
 };
 
+const createSell = async (req, res) => {
+  const {_id, image, title, desc, price, sold} = req.body;
+  try {
+    console.log("the sold item is", title);
+
+    const existingItem = await Sell.findOne({ _id });
+    console.log(existingItem);
+    if (existingItem) {
+      console.log("hello");
+      return res
+        .status(400)
+        .json({ message: "The item already exists!", status: false });
+    }
+
+    else {
+      const sellItem = await Sell.create({
+      image,
+      title,
+      desc,
+      price,
+      sold,
+    });
+    
+    console.log(sellItem)
+    await sellItem.save().then().catch();
+    res.status(201).json({
+      message: "Item sold successfully",
+      data: sellItem,
+      // token,
+      status: true,
+    });
+  }
+ } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: "Something went wrong", status: false });
+  }
+};
+
 const itemsLost = async (req, res) => {
   try {
     const lostItems = await Items.find({ isLost: true });
@@ -181,6 +219,16 @@ const insertImage = async(req, res) => {
       res.send({Status:"error", data:error});
   }
 }
+
+const insertSellImage = async(req, res) => {
+  const {base64} = req.body;
+  try {
+    Sell.create({image: base64});
+    res.send({Status : "ok"})
+  } catch (error) {
+      res.send({Status:"error", data:error});
+  }
+}
 module.exports = {
   createUser,
   signinUser,
@@ -191,4 +239,6 @@ module.exports = {
   itemsLost,
   itemsBuy,
   insertImage,
+  createSell,
+  insertSellImage,
 };
