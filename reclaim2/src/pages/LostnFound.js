@@ -212,11 +212,11 @@ export default function LostnFound() {
       <div className="flex flex-col gap-2 m-10">
 
           <label className="text-[20px]">
-         <input type="radio" name="lof" onChange={(e)=>setisLost(true)} />
+         <input type="radio" name="lof" onClick={(e)=>setisLost(true)} />
           I lost my item
           </label>
           <label className="text-[20px]">
-          <input type="radio" name="lof" onChange={(e)=>setisFound(true)} />
+          <input type="radio" name="lof" onClick={(e)=>setisFound(true)} />
           Found Something
           </label>
             </div>
