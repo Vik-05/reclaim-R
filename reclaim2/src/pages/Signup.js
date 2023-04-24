@@ -127,8 +127,6 @@ const Signup = () => {
             className="bg-blue-950 text-white rounded-xl py-2 px-10 hover:bg-blue-800"
           >
     <Link to="/signin" onClick={handlechange}>Sign up</Link>
-
-            
           </button>
         </form>
       </div>

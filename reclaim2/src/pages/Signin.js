@@ -30,7 +30,7 @@ const Signin = () => {
       password
     })
 
-    if(res.status==200)
+    if(res.status===200)
     {
       console.log(res);
       return navigate("/home");
@@ -41,6 +41,7 @@ const Signin = () => {
     <div className="h-screen flex items-center justify-center">
     <div className="flex h-5/6 w-11/12 bg-gray-200 rounded-[55px] border-4 border-blue-950">
       <div className="w-1/2 text-center flex flex-col items-center justify-center">
+        
         <form method="POST"
           onSubmit={handleSubmit}
           className="bg-white rounded-lg p-10 h-full rounded-l-[50px] shadow-md"

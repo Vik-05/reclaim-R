@@ -1,6 +1,7 @@
 import SellCard from "../components/SellCard";
 import sellarray from "../arrays/sellarray";
 import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
 
 function createSellEntry(sellarray){
   return(
@@ -16,7 +17,9 @@ function createSellEntry(sellarray){
 }
 export default function Sell() {
   return (
+    
     <div className="text-4xl font-medium">
+      <NavBar/>
       {/* <div className="p-10 dark:bg-gray-900 text-white">Buy and Sell</div> */}
       
       {/* BUY AND SELL ITEMS SECTION */}
