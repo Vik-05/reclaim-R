@@ -6,7 +6,7 @@ const Items = require("../models/items");
 const Sell = require("../models/sell");
 
 const createUser = async (req, res) => {
-  const { name, email, password, dob, address, phone } = req.body;
+  const { name, email, password, dob, addres, phone } = req.body;
   try {
     console.log("the name is", name);
 
@@ -24,7 +24,7 @@ const createUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      address,
+      addres,
       phone,
       dob,
     });
