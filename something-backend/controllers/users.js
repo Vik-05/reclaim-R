@@ -142,7 +142,7 @@ const itemsFound = async (req, res) => {
   }
 };
 
-const sell = async (req, res) => {
+const sell = async (req, res) => {  //Sell mai jaake isSold ko true karna hai tabhi fetch hoga
   try {
     const sellItems = await Items.find({isSell: true});
     return res.status(200).json({ result: sellItems });

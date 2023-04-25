@@ -3,7 +3,7 @@ import FoundCard from "../components/FoundCard";
 import lostarray from "../arrays/lostarray";
 import foundarray from "../arrays/foundarray";
 import Footer from "../components/Footer";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
 import NavBar from "../components/NavBar";
 import { ToastContainer, toast } from 'react-toastify';
@@ -58,7 +58,40 @@ export default function LostnFound() {
   const[isFound, setisFound] = useState(false);
   const[isSell, setisSell] = useState(false);
   const[image, setImage] = useState("");
+  const[data, setData] = useState([]);
   // const[image1, setImage1] = useState("");
+
+  useEffect(() => {
+    async function FoundData() {
+      try {
+        const res = await fetch("http://localhost:5000/api/users/foundItems", {
+          method: "GET",
+        });
+        const founddata = await res.json();
+        console.log(founddata);
+        setData(founddata.data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    async function LostData() {
+      try {
+        const res = await fetch("http://localhost:5000/api/users/lostItems", {
+          method: "GET",
+        });
+        const data = await res.json();
+        console.log(data);
+        setData(data.data);
+      } catch (error) {
+        console.error(error);
+      }
+
+      console.log(data);
+    }
+    FoundData();
+    LostData();
+  }, []);
 
   const notify = () => toast("Wow so easy!");
   

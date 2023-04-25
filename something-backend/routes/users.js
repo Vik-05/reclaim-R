@@ -19,11 +19,11 @@ router.post("/signup", createUser);
 router.post("/signin", signinUser);
 router.get("/profile/:id", getSingleUser); // this to be accessed by authorized user only (mandatory)
 router.post("/createItems", createItem); //token issue resolved
-router.get("/foundItems", auth, itemsFound); //items found resolved(aevayi)
+router.get("/foundItems", itemsFound); //items found resolved(aevayi)
 router.post("/sellItems", createSell); //sellItems resolved
 router.post("/uploadSellImage", insertSellImage);
-router.get("/lostItems", auth, itemsLost); //lostItems resolved(aevayi)
-router.get("/buyItems", auth, itemsBuy); //resolved(aevayi)
+router.get("/lostItems", itemsLost); //lostItems resolved(aevayi)
+router.get("/buyItems", itemsBuy); //resolved(aevayi)
 router.post("/uploadImage", insertImage); //resolved
 
 
