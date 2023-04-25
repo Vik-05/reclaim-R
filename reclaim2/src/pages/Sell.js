@@ -112,71 +112,72 @@ export default function Sell() {
           
           <form method="POST" 
             onSubmit={handleSubmit}
-            className="flex flex-col justify-center"
+            className="justify-center"
           >
             <div className="flex">
               <>
                 <label className="m-10 text-sm mb-0 rounded-md" htmlFor="">
                   Title
-                </label>
-                
-                <input
+                  
+                  <input
                   type="text"
-                  className="border-solid border-black block m-10"
+                  className="border-solid text-lg border-black block"
                   placeholder="Item-Name"
                   value={title}
                   onChange={(e) => setTitle(e.target.value)}
-                />
+                  />
+                  </label>
               
               </>
               <>
                 <label className="m-10 text-sm mb-0 rounded-md" htmlFor="">
                   Price
-                </label>
-                
-                <input
+                  
+                  <input
                   type="text"
-                  className="border-solid border-black block m-10"
+                  className="border-solid text-lg border-black block"
                   placeholder="Price Offered"
                   value={price}
                   onChange={(e) => setPrice(e.target.value)}
-                />
-              
+                  />
+                  </label>
+                  
               </>
             </div>
             
             <label className="m-10 text-sm mb-0 rounded-md" htmlFor="">
               Description
-            </label>
-            
-            <input
+              
+              <input
               type="text-area"
-              className="border-solid border-black block m-10"
+              className="border-solid text-lg border-black block ml-10"
               placeholder="Description"
               value={desc}
               onChange={(e) => setDesc(e.target.value)}
-            />
-            
-            <div className="flex flex-col gap-4 m-10">
-              <label>
-                <input type="radio" name="lof" onChange={(e)=>setisSold(true)} />
-                  Sold item
+              />
               </label>
-            </div>
-            
-         
-          {/* IMAGE UPLOAD */}
-          <div className="m-10">
-              <div className="auth-inner" style={{ width : "auto"}}>
-                  Let's upload image <br></br>
-                  <input 
-                    accept="image/*"
-                    type="file"
-                    onChange={convertToBase64}
-                    />
-                  {image==="" || image===null? "" :<img width={100} height={100} src = {image} alt="unavailable" />}   
+              <div className="flex">
+              <div className="flex text-lg m-10">
+              <label>
+              <input type="radio" name="lof" onChange={(e)=>setisSold(true)} />
+              Sold item
+              </label>
               </div>
-            
+              
+              
+              {/* IMAGE UPLOAD */}
+              <div className="m-10 text-lg">
+              <div className="auth-inner" style={{ width : "auto"}}>
+              Let's upload image <br></br>
+              <input 
+              accept="image/*"
+              type="file"
+              onChange={convertToBase64}
+              />
+              {image==="" || image===null? "" :<img width={100} height={100} src = {image} alt="unavailable" />}   
+              </div>
+              
+              </div>
                     </div>
             <br></br>
             
@@ -185,7 +186,7 @@ export default function Sell() {
             <button
               type="Submit"
               onClick={PostData}
-              className="text-xl bg-blue-950 rounded-2xl m-10 p-2 text-white hover:text-blue-950 hover:bg-white hover:border-2"
+              className="text-xl bg-blue-950 rounded-2xl ml-10 p-2 text-white hover:text-blue-950 hover:bg-white hover:border-2"
               >
               Sell Item
             </button>

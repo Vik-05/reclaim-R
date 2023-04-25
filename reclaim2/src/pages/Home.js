@@ -11,9 +11,10 @@ function Home() {
       </div> */}
       <NavBar/>
       <img
-        src="https://www.adani.com/-/media/Project/LucknowAirport/Traveller/AirportServices/LostAndFound/lost-and-found.png"
+        src="https://abcloudz.com/wp-content/uploads/2021/01/poltagscover-min.png"
         className="w-full"
-      ></img>
+        alt="sro"
+      />
       <div className="p-10 text-3xl text-black text-center font-bold">
         Don't let a Mishap cost you a Lot!!
       </div>
