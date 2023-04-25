@@ -3,9 +3,10 @@ import Sell from "./Sell";
 import LostnFound from "./LostnFound";
 import Signin from "./Signin";
 import Signup from "./Signup";
-import NavBar from "../components/NavBar";
+// import NavBar from "../components/NavBar";
+import Profile from "./Profile";
 
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
 export default function Page() {
   return (

@@ -21,7 +21,7 @@ function Home() {
       <div className="p-20 pt-0 pb-0">
         <div className="flex align-baseline">
           <div className="m-10">
-            <img src="https://media.istockphoto.com/id/1187582529/photo/staying-connected-in-this-digital-age.jpg?s=612x612&w=0&k=20&c=35CssnACCspByqwlYO6hgfQQoF3e5Fe_kHya10SQbAw=" />
+            <img src="https://media.istockphoto.com/id/1187582529/photo/staying-connected-in-this-digital-age.jpg?s=612x612&w=0&k=20&c=35CssnACCspByqwlYO6hgfQQoF3e5Fe_kHya10SQbAw=" alt="sdfg"/>
           </div>
 
           <div className="w-1/2">
@@ -46,7 +46,7 @@ function Home() {
 
         <div className="flex flex-row-reverse">
           <div className="m-10">
-            <img src="https://dynamic-cdn.eggdigital.com/bRSu3cBhv.jpg" />
+            <img src="https://dynamic-cdn.eggdigital.com/bRSu3cBhv.jpg" alt="wert" />
           </div>
 
           <div className="w-1/2">
@@ -71,7 +71,7 @@ function Home() {
 
         <div className="flex">
           <div className="m-10">
-            <img src="https://fleamarketflipper.com/wp-content/uploads/2021/02/used-items.jpg" />
+            <img src="https://fleamarketflipper.com/wp-content/uploads/2021/02/used-items.jpg" alt="ghjk"/>
           </div>
 
           <div className="w-1/2">
@@ -97,21 +97,21 @@ function Home() {
         </div>
         <div className="flex justify-evenly">
           <div className="w-1/14 max-w-xs rounded-full">
-            <img src="https://www.wetzelcountyschools.com/cms/lib/WV01000015/Centricity/Domain/957/Form-Button.png" />
+            <img src="https://www.wetzelcountyschools.com/cms/lib/WV01000015/Centricity/Domain/957/Form-Button.png" alt="rtyui"/>
             <p className="w-full text-lg text-black font-bold">
               Fill out the form!
             </p>
           </div>
 
           <div className="max-w-xs rounded-full">
-            <img src="https://media.istockphoto.com/id/1190332135/vector/young-woman-working-on-laptop-computer-and-talking-on-mobile-phone.jpg?s=612x612&w=0&k=20&c=X8N5bqdj1R3dyL2ftRhjaRpRE0dChhk0BzuDkx-8arU=" />
+            <img src="https://media.istockphoto.com/id/1190332135/vector/young-woman-working-on-laptop-computer-and-talking-on-mobile-phone.jpg?s=612x612&w=0&k=20&c=X8N5bqdj1R3dyL2ftRhjaRpRE0dChhk0BzuDkx-8arU=" alt="pioc"/>
             <p className="w-full text-lg text-black font-bold">
               Our team will reach you out
             </p>
           </div>
 
           <div className="w-1/14 max-w-xs rounded-full">
-            <img src="https://images.pond5.com/rocket-animation-rocket-launch-cartoon-footage-131435149_iconl.jpeg" />
+            <img src="https://images.pond5.com/rocket-animation-rocket-launch-cartoon-footage-131435149_iconl.jpeg" alt="okjn"/>
             <p className="w-full text-lg text-black font-bold">Get started!</p>
           </div>
         </div>
@@ -122,7 +122,7 @@ function Home() {
             
             class="text-white bg-blue-700 p-5 pt-2 pb-2 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
-            <a href='https://forms.gle/GB6wULqsfCkT6Kg9A' target="_blank"> Register Now</a>
+            <a href='https://forms.gle/GB6wULqsfCkT6Kg9A' rel="noreferrer" target="_blank"> Register Now</a>
            
           </button>
         </div>

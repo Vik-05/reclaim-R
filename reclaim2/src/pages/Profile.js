@@ -13,13 +13,13 @@ export default function Profile(){
       <div className="text-xl text-start ">
       <b>Name</b> 
       <div className="bg-white p-2 rounded-full text-center">
-      Papa Mustachio
+      Sam Sharma
       </div>
       </div>
       <div className="text-xl text-start ">
       <b>Email</b>
       <div className="bg-white p-2 rounded-full text-center">
-      PapaMustachio@gmail
+      sam24@gmail.com
       </div>
       </div>
       <div className="text-xl text-start ">
@@ -27,7 +27,7 @@ export default function Profile(){
       Phone Number
       </b>
       <div className="bg-white p-2 rounded-full text-center">
-      9211420696
+      8133264453
       </div> 
       </div>
       </div>
@@ -37,7 +37,7 @@ export default function Profile(){
       Address
       </b>
       <div className="bg-white p-4 rounded-full text-center">
-      Room No - 406, B - 7 / 102 - 103, Bawana Road, New Delhi, Delhi 110042
+      A-5 Tilak Nagar New Delhi
       </div> 
       </div>
       </div>
