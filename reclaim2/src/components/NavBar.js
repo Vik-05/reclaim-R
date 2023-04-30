@@ -23,13 +23,13 @@ const NavBar = () => {
                 to="/Sell"
                 className="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                Buy n Sell
+                Buy and Sell
               </Link>
               <Link
                 to="/lost-found"
                 className="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >
-                Lost n found
+                Lost and found
               </Link>
               <Link
                 to="/Chat"
