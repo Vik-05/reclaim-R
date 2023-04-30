@@ -1,3 +1,4 @@
+import Footer from "../components/Footer"
 import NavBar from "../components/NavBar"
 
 export default function Profile(){
@@ -42,6 +43,7 @@ export default function Profile(){
       </div>
       </div>
       </div>
+      {/* <Footer /> */}
       </div>
       )
     }

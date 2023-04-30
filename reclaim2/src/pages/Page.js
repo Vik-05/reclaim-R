@@ -8,6 +8,8 @@ import Profile from "./Profile";
 
 import { Routes, Route } from "react-router-dom";
 import Home from "./Home";
+import LnF from "./lnf";
+import BnS from "./BnS";
 export default function Page() {
   return (
     <div>
@@ -49,7 +51,8 @@ export default function Page() {
         <Route path="Sell" element={<Sell />}></Route>
         <Route path="Chat" element={<Chat />}></Route>
         <Route path="Profile" element={<Profile />}></Route>
-
+        <Route path="LnF" element={<LnF />}></Route>
+        <Route path="BnS" element={<BnS />}></Route>
       </Routes>
     </div>
   );

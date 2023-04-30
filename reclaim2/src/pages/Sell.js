@@ -1,24 +1,9 @@
-import SellCard from "../components/SellCard";
-import sellarray from "../arrays/sellarray";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { useState } from "react";
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
-function createSellEntry(sellarray){
-  return(
-      <SellCard
-          key = {sellarray.id}
-          image = {sellarray.image}
-          item = {sellarray.item}
-          name = {sellarray.name}
-          email = {sellarray.email}
-          desc = {sellarray.desc}
-      />
-    );
-}
 
 async function sendDataToApi(data) {
 
@@ -38,7 +23,7 @@ export default function Sell() {
   const[sold, setisSold] = useState(false);
   const[image, setImage] = useState("");
 
-  const notify = () => toast("Wow so easy!");
+  const notify = () => toast("item updated successfully!");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -94,16 +79,10 @@ export default function Sell() {
   return (
     <div className="text-4xl font-medium">
       <NavBar/>
-      {/* <div className="p-10 dark:bg-gray-900 text-white">Buy and Sell</div> */}
-      
-      {/* SELL ITEMS SECTION */}
-      <div className="p-10">
-        <div className="text-3xl p-4">Shop or sell</div>
-        <div className="flex gap-5 w-full">
-          {sellarray.map(createSellEntry)}
-        </div>
-      </div>
-      
+      <img src="https://media.istockphoto.com/id/113713550/photo/woman-lost-purse-wallet-walking-away.jpg?s=612x612&w=0&k=20&c=TWY4goXsyQkK64doWQdwHpWohyGebIFmHnZ09qiBvpQ=" 
+        className="w-full max-h-96"
+        alt="image" 
+      />
       {/* SELL FORM BELOW */}
       <div className="flex justify-center">
         <div className="flex flex-col p-10 rounded-lg">
