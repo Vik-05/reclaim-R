@@ -115,19 +115,16 @@ export default function LostnFound() {
 
   return (
     <>
-    <div className="text-2xl font-medium">
+    <div>
     <NavBar/>
       {/* LOST ITEMS AND FOUND ITEMS IN ONE FORM */}
-      <img src="https://media.istockphoto.com/id/113713550/photo/woman-lost-purse-wallet-walking-away.jpg?s=612x612&w=0&k=20&c=TWY4goXsyQkK64doWQdwHpWohyGebIFmHnZ09qiBvpQ=" 
-        className="w-full max-h-96"
-        alt="image" 
-      />
-      <div className="m-auto justify-center text-center">
+     
+      <div className="m-10 rounded-xl border-2 justify-center text-center p-5">
 
         <div className="flex flex-col justify-evenly m-10 mt-0" >
           
           <h1 className="text-4xl mb-0 m-10">Lost or Found Something?</h1>
-          <p className="text-lg mr-5 ">
+          <p className="text-lg">
             Fill this quick form to find your belonging
           </p>
         
@@ -136,7 +133,7 @@ export default function LostnFound() {
         <form method="POST"
             onSubmit={handleSubmit}
             >
-            <div className="flex">
+            <div className="flex justify-center">
               <div>
                 <label className="m-10 text-sm mb-0 " htmlFor="">
                   Title of item
@@ -180,7 +177,8 @@ export default function LostnFound() {
               />
             </div>
             </div>
-            <div className="flex m-10">
+            
+            <div className="flex m-10 justify-center">
       
 
       <div className="flex flex-col gap-2 m-10">

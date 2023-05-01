@@ -20,18 +20,6 @@ const NavBar = () => {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <Link
-                to="/Sell"
-                className="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Buy and Sell
-              </Link>
-              <Link
-                to="/lost-found"
-                className="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-              >
-                Lost and found
-              </Link>
-              <Link
                 to="/Chat"
                 className="text-gray-300 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
               >

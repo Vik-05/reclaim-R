@@ -5,7 +5,7 @@ import foundarray from '../arrays/foundarray';
 import LostCard from '../components/LostCard';
 import FoundCard from '../components/FoundCard';
 import Footer from '../components/Footer';
-
+import {Link} from 'react-router-dom';
 function createLostEntry(lostarray)
 {
     return(
@@ -38,8 +38,9 @@ function LnF() {
    <div>
         <NavBar />
         {/* LOST SECTION */}
+        <div className='flex flex-col justify-between gap-5 m-10'>
         <div className="p-10">
-          <div className="text-3xl p-4">Lost Section</div>
+        <div className="text-3xl p-4">Lost Section</div>
             <div className="flex gap-5 w-full">
               {lostarray.map(createLostEntry)}
             </div>
@@ -50,10 +51,19 @@ function LnF() {
             <div className="text-3xl p-4">Found Section</div>
             <div className="flex gap-5 w-full">
                 {foundarray.map(createFoundEntry)}
-            </div>
-        </div>
-    <Footer />
-    </div>
+                </div>
+                </div>
+                <button>
+                <Link
+                to="/lost-found"
+                className="bg-blue-950 p-5 text-white font-bold text-lg rounded-full"
+              >
+                Lost and found
+              </Link>
+                </button>
+                </div>
+                <Footer />
+                </div>
   )
 }
 

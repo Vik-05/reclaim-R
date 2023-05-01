@@ -77,15 +77,12 @@ export default function Sell() {
 
   
   return (
-    <div className="text-4xl font-medium">
+    <div className="text-4xl">
       <NavBar/>
-      <img src="https://media.istockphoto.com/id/113713550/photo/woman-lost-purse-wallet-walking-away.jpg?s=612x612&w=0&k=20&c=TWY4goXsyQkK64doWQdwHpWohyGebIFmHnZ09qiBvpQ=" 
-        className="w-full max-h-96"
-        alt="image" 
-      />
+      
       {/* SELL FORM BELOW */}
       <div className="flex justify-center">
-        <div className="flex flex-col p-10 rounded-lg">
+        <div className="flex flex-col p-10 rounded-xl border-2 m-10">
           <h1 className="text-4xl mb-0 m-10">Want to sell something?</h1>
           <p className="text-lg ml-10">Sell your belongings here!!</p>
           
@@ -139,7 +136,7 @@ export default function Sell() {
               <div className="flex text-lg m-10">
               <label>
               <input type="radio" name="lof" onChange={(e)=>setisSold(true)} />
-              Sold item
+              Sell item
               </label>
               </div>
               
