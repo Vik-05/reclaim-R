@@ -1,27 +1,54 @@
 import React from "react";
 import Footer from "../components/Footer";
-import NavBar from "../components/NavBar";
+import { Link } from "react-router-dom";
+// import NavBar from "../components/NavBar";
 
 function Home() {
- 
   return (
     <div>
+      <nav className=" bg-gray-900 flex justify-between gap-5 p-5 pl-10 pr-10 sticky top-0">
+        <div className="flex-shrink-0 text-white text-4xl font-semibold">
+          <Link to="/">
+            <h1>Reclaim-R</h1>
+          </Link>
+        </div>
+        <div className="gap-5">
+          <button>
+            <Link
+              to="/signin"
+              className="text-gray-300 hover:bg-blue-700 hover:text-white rounded-md text-lg p-2"
+            >
+              Login
+            </Link>
+          </button>
+          <button>
+            <Link
+              to="/signup"
+              className="text-gray-300 hover:bg-blue-700 hover:text-white rounded-md text-lg p-2"
+            >
+              Sign up
+            </Link>
+          </button>
+        </div>
+      </nav>
       {/* <div className="p-5 text-3xl bg-gray-900 text-white text-center font-2xl">
         Home Page
       </div> */}
-      <NavBar/>
-      <img
+      {/* <img
         src="https://abcloudz.com/wp-content/uploads/2021/01/poltagscover-min.png"
         className="w-full"
         alt="sro"
-      />
+      /> */}
       <div className="p-10 text-3xl text-black text-center font-bold">
         Don't let a Mishap cost you a Lot!!
       </div>
       <div className="p-20 pt-0 pb-0">
         <div className="flex align-baseline">
           <div className="m-10">
-            <img src="https://media.istockphoto.com/id/1187582529/photo/staying-connected-in-this-digital-age.jpg?s=612x612&w=0&k=20&c=35CssnACCspByqwlYO6hgfQQoF3e5Fe_kHya10SQbAw=" alt="sdfg"/>
+            <img
+              src="https://media.istockphoto.com/id/1187582529/photo/staying-connected-in-this-digital-age.jpg?s=612x612&w=0&k=20&c=35CssnACCspByqwlYO6hgfQQoF3e5Fe_kHya10SQbAw="
+              alt="sdfg"
+            />
           </div>
 
           <div className="w-1/2">
@@ -46,7 +73,10 @@ function Home() {
 
         <div className="flex flex-row-reverse">
           <div className="m-10">
-            <img src="https://dynamic-cdn.eggdigital.com/bRSu3cBhv.jpg" alt="wert" />
+            <img
+              src="https://dynamic-cdn.eggdigital.com/bRSu3cBhv.jpg"
+              alt="wert"
+            />
           </div>
 
           <div className="w-1/2">
@@ -71,7 +101,10 @@ function Home() {
 
         <div className="flex">
           <div className="m-10">
-            <img src="https://fleamarketflipper.com/wp-content/uploads/2021/02/used-items.jpg" alt="ghjk"/>
+            <img
+              src="https://fleamarketflipper.com/wp-content/uploads/2021/02/used-items.jpg"
+              alt="ghjk"
+            />
           </div>
 
           <div className="w-1/2">
@@ -85,7 +118,7 @@ function Home() {
               also put some money back in your pocket. Here are some tips for
               successfully selling your unwanted items Sort through your
               belongings and decide what you want to sell. Consider items that
-              are in good condition, but you no longer use or need. 
+              are in good condition, but you no longer use or need.
             </p>
           </div>
         </div>
@@ -97,21 +130,30 @@ function Home() {
         </div>
         <div className="flex justify-evenly">
           <div className="w-1/14 max-w-xs rounded-full">
-            <img src="https://www.wetzelcountyschools.com/cms/lib/WV01000015/Centricity/Domain/957/Form-Button.png" alt="rtyui"/>
+            <img
+              src="https://www.wetzelcountyschools.com/cms/lib/WV01000015/Centricity/Domain/957/Form-Button.png"
+              alt="rtyui"
+            />
             <p className="w-full text-lg text-black font-bold">
               Fill out the form!
             </p>
           </div>
 
           <div className="max-w-xs rounded-full">
-            <img src="https://media.istockphoto.com/id/1190332135/vector/young-woman-working-on-laptop-computer-and-talking-on-mobile-phone.jpg?s=612x612&w=0&k=20&c=X8N5bqdj1R3dyL2ftRhjaRpRE0dChhk0BzuDkx-8arU=" alt="pioc"/>
+            <img
+              src="https://media.istockphoto.com/id/1190332135/vector/young-woman-working-on-laptop-computer-and-talking-on-mobile-phone.jpg?s=612x612&w=0&k=20&c=X8N5bqdj1R3dyL2ftRhjaRpRE0dChhk0BzuDkx-8arU="
+              alt="pioc"
+            />
             <p className="w-full text-lg text-black font-bold">
               Our team will reach you out
             </p>
           </div>
 
           <div className="w-1/14 max-w-xs rounded-full">
-            <img src="https://images.pond5.com/rocket-animation-rocket-launch-cartoon-footage-131435149_iconl.jpeg" alt="okjn"/>
+            <img
+              src="https://images.pond5.com/rocket-animation-rocket-launch-cartoon-footage-131435149_iconl.jpeg"
+              alt="okjn"
+            />
             <p className="w-full text-lg text-black font-bold">Get started!</p>
           </div>
         </div>
@@ -119,11 +161,16 @@ function Home() {
         <div className="text-center p-10 pb-0">
           <button
             type="button"
-            
             class="text-white bg-blue-700 p-5 pt-2 pb-2 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
-            <a href='https://forms.gle/GB6wULqsfCkT6Kg9A' rel="noreferrer" target="_blank"> Register Now</a>
-           
+            <a
+              href="https://forms.gle/GB6wULqsfCkT6Kg9A"
+              rel="noreferrer"
+              target="_blank"
+            >
+              {" "}
+              Register Now
+            </a>
           </button>
         </div>
         {/* <div className='bg-one h-48 w-full'>
