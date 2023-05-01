@@ -3,10 +3,9 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 // import NavBar from "../components/NavBar";
 
-
 function Home() {
   return (
-    <div className="flex flex-col justify-center"> 
+    <div className="flex flex-col justify-center">
       <nav className=" bg-gray-900 flex justify-between gap-5 p-5 pl-10 pr-10 sticky top-0">
         <div className="flex-shrink-0 text-white text-4xl font-semibold">
           <Link to="/">
@@ -44,25 +43,27 @@ function Home() {
 
         <div className="text-3xl font-medium my-auto text-center">
           LOST AND FOUND MADE EASY !!!!
-          <p className="text-xl font-normal pt-5">Streamline lost and found with our all-in-one solution- ReclaimR</p>
+          <p className="text-xl font-normal pt-5">
+            Streamline lost and found with our all-in-one solution- ReclaimR
+          </p>
           <div className="text-center p-10 pb-0">
-          <button
-            type="button"
-            class="text-white bg-blue-700 p-5 pt-2 pb-2 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-          >
-            <a
-              href="https://forms.gle/GB6wULqsfCkT6Kg9A"
-              rel="noreferrer"
-              target="_blank"
+            <button
+              type="button"
+              class="text-white bg-blue-700 p-5 pt-2 pb-2 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
             >
-              {" "}
-              Register Your Campus
-            </a>
-          </button>
-        </div>
+              <a
+                href="https://forms.gle/GB6wULqsfCkT6Kg9A"
+                rel="noreferrer"
+                target="_blank"
+              >
+                {" "}
+                Register Your Campus
+              </a>
+            </button>
+          </div>
         </div>
       </div>
-      
+
       <div className="p-10 text-3xl text-black text-center font-bold">
         Don't let a Mishap cost you a Lot!!
       </div>
@@ -182,7 +183,6 @@ function Home() {
           </div>
         </div>
 
-        
         {/* <div className='bg-one h-48 w-full'>
             <p>ncend fc enr f</p>
         </div> */}
