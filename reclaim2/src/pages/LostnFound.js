@@ -57,7 +57,7 @@ export default function LostnFound() {
     }
     FoundData();
     LostData();
-  });
+  }, []);
 
   const notify = () => toast("item updated successfully!");
   

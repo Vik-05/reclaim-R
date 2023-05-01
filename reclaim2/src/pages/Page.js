@@ -23,7 +23,7 @@ export default function Page() {
           }
         ></Route> */}
         <Route
-          path="/"
+          path="/signin"
           element={
             <>
               <Signin />
@@ -40,7 +40,7 @@ export default function Page() {
         ></Route>
         <Route path="signin" element={<Signin />}></Route>
         <Route
-          path="home"
+          path="/"
           element={
             <>
               <Home />
