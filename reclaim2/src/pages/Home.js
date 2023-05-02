@@ -52,7 +52,7 @@ function Home() {
               class="text-white bg-blue-700 p-5 pt-2 pb-2 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
             >
               <a
-                href="https://forms.gle/GB6wULqsfCkT6Kg9A"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfDJ_7FOwPdvQn1VVcw7BJxbhsyo8hnyN_ov-BN_XScyvxmsw/viewform"
                 rel="noreferrer"
                 target="_blank"
               >
