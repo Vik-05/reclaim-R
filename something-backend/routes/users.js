@@ -2,15 +2,11 @@ const {
   createUser,
   signinUser,
   getSingleUser,
-  createItem,
-  itemsFound,
-  sell,
-  itemsLost,
-  itemsBuy,
   insertImage,
-  createSell,
   insertSellImage
 } = require("../controllers/users");
+const { createItem, itemsFound, itemsLost } = require("../controllers/items");
+const { sell, itemsBuy } = require("../controllers/sellcon");
 const auth = require("../middleware/auth");
 
 const router = require("express").Router();
@@ -25,7 +21,6 @@ router.post("/uploadSellImage", insertSellImage);
 router.get("/lostItems", itemsLost); //lostItems resolved(aevayi)
 router.get("/buyItems", itemsBuy); //resolved(aevayi)
 router.post("/uploadImage", insertImage); //resolved
-
 
 
 module.exports = router;
