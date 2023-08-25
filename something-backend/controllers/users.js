@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const Users = require("../models/users");
 
 const createUser = async (req, res) => {
-  const { name, email, password, dob, addres, phone } = req.body;
+  const { name, email, password, dob, address, phone } = req.body;
   try {
     console.log("the name is", name);
 
@@ -22,7 +22,7 @@ const createUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
-      addres,
+      address,
       phone,
       dob,
     });
@@ -81,7 +81,7 @@ const signinUser = async (req, res) => {
 
 const getSingleUser = async (req, res) => {
   try {
-    const user = await Users.findById(req.params.id);
+    const user = await Users.findById({ _id: req.user.id });
 
     return res.status(200).json({ result: user });
   } catch (err) {
@@ -94,5 +94,4 @@ module.exports = {
   createUser,
   signinUser,
   getSingleUser,
-
 };
