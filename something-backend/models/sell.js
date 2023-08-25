@@ -5,6 +5,7 @@ const sellSchema = new Schema({
   desc: { type: "String", require: "true" },
   price: Number,
   sold: { type: Boolean, default: false },
+  image: String,
   createdAt: { type: Date, default: Date.now() },
 });
 

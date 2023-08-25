@@ -16,12 +16,12 @@ export default function Footer() {
             </li>
             <li>
               <a href="#" class="mr-4 hover:underline md:mr-6 ">
-                Donate
+                Chat
               </a>
             </li>
             <li>
               <a href="#" class="hover:underline">
-                Contact
+                Profile
               </a>
             </li>
           </ul>
