@@ -81,12 +81,16 @@ const signinUser = async (req, res) => {
 
 const getSingleUser = async (req, res) => {
   try {
-    const user = await Users.findById({ _id: req.user.id });
-
-    return res.status(200).json({ result: user });
+    const user = await Users.findById(req.params.id);
+    return res.status(200).json({
+      status: "success",
+      data: {
+        user,
+      },
+    });
   } catch (err) {
     console.log(err);
-    res.status(500).json({ message: "Something went wrong" });
+    res.status(500).json({ message: err });
   }
 };
 
