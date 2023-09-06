@@ -7,9 +7,10 @@ const { createItem, itemsFound, itemsLost } = require("../controllers/items");
 const { sell, itemsBuy } = require("../controllers/sellcon");
 const auth = require("../middleware/auth");
 
+
 const router = require("express").Router();
 
-router.post("/signup", createUser);
+router.post("/signup",createUser);
 router.post("/signin", signinUser);
 router.get("/profile/:id", getSingleUser); // this to be accessed by authorized user only
 router.post("/createItems", createItem); //token issue resolved
