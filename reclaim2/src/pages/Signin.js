@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+
 async function sendDataToApiLog(data) {
+  
+
   return await axios({
     method: "POST",
     url: "http://localhost:5000/api/users/signin",
@@ -23,6 +26,7 @@ const Signin = () => {
 
   const PostDatalog = async (e) => {
     e.preventDefault();
+    
     const res = await sendDataToApiLog({
       email,
       password,
